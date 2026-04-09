@@ -2,6 +2,10 @@
 
 Event-driven Multi-Agent Trading-System fuer Polymarket mit SQLite Event Bus, Risk-Limits und 24/7 Betrieb.
 
+**Repository:** [github.com/vinchafer/polymarket-investment-agend-2](https://github.com/vinchafer/polymarket-investment-agend-2)
+
+**Vercel-Dashboard (öffentlich):** [vercel-dashboard-lyart-pi.vercel.app](https://vercel-dashboard-lyart-pi.vercel.app) — setze dort `NEXT_PUBLIC_API_BASE` auf deine VPS-API-URL, sonst zeigt die Seite einen Hinweis.
+
 ## Was umgesetzt ist
 
 - 6-Agent Architektur:
