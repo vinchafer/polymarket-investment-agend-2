@@ -1,0 +1,15 @@
+[Unit]
+Description=Polymarket Investment Agent
+After=network.target
+
+[Service]
+Type=simple
+User=vinch
+WorkingDirectory=/opt/polymarket-investment-agend-2
+EnvironmentFile=/opt/polymarket-investment-agend-2/.env
+ExecStart=/opt/polymarket-investment-agend-2/.venv/bin/polymarket-agent
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
