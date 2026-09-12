@@ -1,0 +1,18 @@
+[Unit]
+Description=Polymarket Agent 2 Read-Only API (Port 8768)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/polymarket-agent2
+Environment=PATH=/root/polymarket-agent2/venv/bin:/usr/bin:/bin
+ExecStart=/root/polymarket-agent2/venv/bin/python3 agent2_api.py
+Restart=always
+RestartSec=30
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

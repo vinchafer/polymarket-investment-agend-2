@@ -1,0 +1,47 @@
+# Polymarket AI Trading Agent — Dependencies
+# Installieren mit: pip install -r requirements.txt
+
+# ============================================================
+# KERN-DEPENDENCIES
+# ============================================================
+
+# Polymarket CLOB API Client (offiziell von Polymarket)
+py-clob-client==0.34.6
+
+# Gemini API (primary Analyst LLM)
+google-genai>=1.0.0
+
+# Groq API (Devil's Advocate + Analyst fallback)
+groq>=0.11.0
+
+# HTTP Requests (für Telegram + research sources)
+requests==2.32.5
+
+# ============================================================
+# FREE RESEARCH SOURCES (researcher_v2.py)
+# ============================================================
+
+# DuckDuckGo search — free, no API key needed
+ddgs
+
+# Google News RSS parser — free, no API key needed
+feedparser>=6.0.0
+
+# HTML parsing for Bing fallback scraper
+beautifulsoup4>=4.12.0
+
+# Umgebungsvariablen aus .env Datei laden
+python-dotenv==1.2.2
+
+# Machine Learning (für LearningEngine Win-Predictor ab 50+ Bets)
+scikit-learn>=1.3.0
+
+# ============================================================
+# STANDARD LIBRARY (kein Install nötig, nur zur Dokumentation)
+# ============================================================
+# sqlite3   — Datenbank (eingebaut)
+# logging   — Logging (eingebaut)
+# json      — JSON (eingebaut)
+# datetime  — Datum/Zeit (eingebaut)
+# signal    — Signal-Handler (eingebaut)
+# argparse  — CLI-Argumente (eingebaut)

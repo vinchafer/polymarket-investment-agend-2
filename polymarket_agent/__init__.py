@@ -1,1 +1,0 @@
-"""Polymarket Investment Agent package."""

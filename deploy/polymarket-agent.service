@@ -1,15 +1,16 @@
 [Unit]
-Description=Polymarket Investment Agent
+Description=Polymarket AI Trading Agent
 After=network.target
 
 [Service]
 Type=simple
-User=vinch
-WorkingDirectory=/opt/polymarket-investment-agend-2
-EnvironmentFile=/opt/polymarket-investment-agend-2/.env
-ExecStart=/opt/polymarket-investment-agend-2/.venv/bin/polymarket-agent
+User=root
+WorkingDirectory=/root/polymarket-agent
+EnvironmentFile=/etc/polymarket/agent1.env
+ExecStart=/root/polymarket-agent/venv/bin/python3 main.py
 Restart=always
-RestartSec=5
+RestartSec=30
+Environment=PYTHONUNBUFFERED=1
 
 [Install]
 WantedBy=multi-user.target

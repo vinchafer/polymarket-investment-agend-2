@@ -1,0 +1,16 @@
+[Unit]
+Description=Polymarket Copy-Arm Agent 2 (A1 codebase clone, deterministic wallet-copy)
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/polymarket-agent2
+EnvironmentFile=/etc/polymarket/agent2.env
+ExecStart=/root/polymarket-agent2/venv/bin/python3 main.py
+Restart=always
+RestartSec=30
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
